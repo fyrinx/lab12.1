@@ -11,7 +11,6 @@ Ext.define('Lab121.view.main.Main', {
 
     requires: [
         'Ext.MessageBox',
-
         'Lab121.view.main.MainController',
         'Lab121.view.main.MainModel',
         'Lab121.view.main.List'

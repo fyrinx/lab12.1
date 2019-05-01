@@ -1,19 +1,19 @@
 Ext.define('KitchenSink.view.calendar.Week', {
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.Panel',
     xtype: 'calendar-week-view',
 
     requires: [
-        'KitchenSink.data.calendar.Week',
         'Ext.calendar.panel.Week',
         'Ext.calendar.List',
-        'Ext.SegmentedButton'
+        'Ext.SegmentedButton',
+
     ],
 
     viewModel: {
         data: {
             value: new Date(),
             visibleDays: 7,
-            firstDayOfWeek: 0
+            firstDayOfWeek: 1
         },
         formulas: {
             calMode: {
@@ -33,7 +33,7 @@ Ext.define('KitchenSink.view.calendar.Week', {
                 autoLoad: true,
                 proxy: {
                     type: 'ajax',
-                    url: '/KitchenSink/CalendarWeek'
+                    url: '/KitchenSink/testStore'
                 }
             }
         }
